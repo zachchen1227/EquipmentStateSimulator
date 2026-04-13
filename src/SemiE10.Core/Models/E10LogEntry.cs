@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using static SemiE10.Core.Enums.SysEnums;
 
 namespace SemiE10.Core.Enums
 {
-    internal class E10LogEntry
+    public class E10LogEntry
     {
+        public DateTime TimeStamp { get; set; }
+        public MachineState OldState { get; set; }
+        public MachineState NewState { get; set; }
+        public OperationMode Mode { get; set; }
+        public E10State E10MappedState { get; set; }
+        public string reason { get; set; } = string.Empty;
     }
 }

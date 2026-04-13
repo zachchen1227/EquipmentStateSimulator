@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace SemiE10.Core.Interfaces
 {
-    internal interface IBindableE10View
+    public interface IBindableE10View
     {
+        void Bind(IE10Tracker tracker);
+
+        void Unbind();
     }
 }
