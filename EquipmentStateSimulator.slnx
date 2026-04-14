@@ -1,7 +1,8 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="src/EquipmentState.DemoApp/EquipmentState.DemoApp.csproj" Id="0f7a9c23-fbd0-42fa-8e45-2aae176d5ece" />
+    <Project Path="src/EquipmentState.UI.WinForms/EquipmentState.UI.WinForms.csproj" Id="26c07558-f3e1-48b1-ab1e-0123a10031b7" />
     <Project Path="src/SemiE10.Core/SemiE10.Core.csproj" Id="f4c78312-3f30-40ed-b280-76a16229827a" />
-    <Project Path="src/SemiE10.DemoApp/SemiE10.DemoApp.csproj" Id="2137f834-d5a6-4337-a096-e9fe3b5bef44" />
   </Folder>
   <Folder Name="/tests/" />
 </Solution>

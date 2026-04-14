@@ -1,4 +1,4 @@
-namespace SemiE10.DemoApp
+namespace EquipmentState.DemoApp
 {
     internal static class Program
     {
@@ -11,7 +11,7 @@ namespace SemiE10.DemoApp
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new MainForm());
+            Application.Run(new Form1());
         }
     }
 }

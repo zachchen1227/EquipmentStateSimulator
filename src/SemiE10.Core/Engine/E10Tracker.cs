@@ -17,6 +17,19 @@ namespace SemiE10.Core.Engine
         public event EventHandler<StateChangedEventArgs>? OnStateChanged;    
         public event EventHandler? OnTimeUpdated;
 
+
+        public E10Tracker()
+        {
+            //初始化狀態與計時器
+            CurrentMachineState = MachineState.Offline;
+            CurrentMode = OperationMode.Production;
+            CurrentE10State = MapToE10State(CurrentMachineState);
+            foreach (E10State state in Enum.GetValues(typeof(E10State)))
+            {
+                _stateTimers[state] = 0; //初始累積時間為0
+            }
+        }
+
         public bool TryChangeState(MachineState newState, string reason)
         {         
 
@@ -43,15 +56,25 @@ namespace SemiE10.Core.Engine
             return true; //暫時允許所有模式改變，實際應根據需求實作
         }   
 
+        public double CaculateReliability()
+        {           
+            return 0; //暫時預設為0，實際應根據需求實作
+        }
+
+        public double CaculateMaintainability()
+        {
+            return 0; //暫時預設為0，實際應根據需求實作
+        }
+
         public double CaculateUtilization()
         {
-            //根據目前狀態累積的秒數，計算利用率
+     
             return 0; //暫時預設為0，實際應根據需求實作
         }
 
         public double CaculateAvailability()
         {
-            //根據目前狀態累積的秒數，計算可用率
+            
             return 0; //暫時預設為0，實際應根據需求實作
         }   
         
