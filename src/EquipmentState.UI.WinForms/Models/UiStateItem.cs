@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SemiE10.Core.Engine
+namespace EquipmentState.UI.WinForms.Models
 {
-    internal class OfflineCompensation
+    internal class UiStateItem
     {
     }
 }

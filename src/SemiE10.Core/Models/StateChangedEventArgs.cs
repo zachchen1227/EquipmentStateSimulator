@@ -7,12 +7,17 @@ namespace SemiE10.Core.Models
         public MachineState OldMachineState { get; }
         public MachineState NewMachineState { get; }
         public E10State NewE10State { get; }
+        public DateTime Timestamp { get; }
 
-        public StateChangedEventArgs(MachineState oldMachineState, MachineState newMachineState, E10State newE10State)
+        public StateChangedEventArgs(
+            MachineState oldMachineState,
+            MachineState newMachineState,
+            E10State newE10State,DateTime timestamp)
         {
             OldMachineState = oldMachineState;
             NewMachineState = newMachineState;
             NewE10State = newE10State;
+            Timestamp = timestamp;
         }
     }
 }

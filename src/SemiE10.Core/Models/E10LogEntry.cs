@@ -9,6 +9,6 @@ namespace SemiE10.Core.Enums
         public MachineState NewState { get; set; }
         public OperationMode Mode { get; set; }
         public E10State E10MappedState { get; set; }
-        public string reason { get; set; } = string.Empty;
+        public string Reason { get; set; } = string.Empty;
     }
 }
