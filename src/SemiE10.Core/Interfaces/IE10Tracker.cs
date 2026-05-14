@@ -18,21 +18,25 @@ namespace SemiE10.Core.Interfaces
 
         #region 事件
         //狀態改變事件，提供舊狀態、新狀態、對應的E10狀態以及改變原因
-        event EventHandler<StateChangedEventArgs>? OnStateChanged;
-
-        //時間更新事件，當狀態累積時間更新時觸發
-        event EventHandler? OnTimeUpdated;
+        event EventHandler<StateChangedEventArgs>? OnStateChanged;     
         #endregion
 
         #region 方法
+
+        #region 改變狀態或操作模式
+
         //嘗試改變機台狀態，根據實際需求判斷是否允許改變，並提供改變原因
         bool TryChangeState(MachineState newState, string reason = "");
 
         //嘗試改變操作模式，根據實際需求判斷是否允許改變
         bool TryChangeMode(OperationMode newMode);
 
+        #endregion
+
+        #region 計算4大指標
+
         //計算機台可靠度（Availability  = Uptime / 當機發生的總次數）
-        double CaculateReliability();
+        double CalculateReliability();
 
         //計算機台可用性（MTBF = Uptime / Operations Time × 100%）
         double CaculateAvailability();
@@ -43,8 +47,13 @@ namespace SemiE10.Core.Interfaces
         //計算機台利用率（ Utilization = ProductiveTime / Operations Time × 100% ）
         double CaculateUtilization();
 
+        #endregion
+
+        #region 查詢累積時間
         //獲取指定E10狀態累積的秒數
-        double GetStateAccumulatedSeconds(E10State targetState);
+        bool GetStateAccumulatedSeconds(E10State targetState, out double accumulatedSeconds);
+        #endregion
+
         #endregion
     }
 }

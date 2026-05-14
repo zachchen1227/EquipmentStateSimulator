@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
-namespace EquipmentState.UI.WinForms.Models
-{
-    internal class UiStateItem
-    {
-    }
-}
+namespace EquipmentState.UI.WinForms.Models;
+
+public sealed record UiStateItem(string Code, string Name, Color Color);

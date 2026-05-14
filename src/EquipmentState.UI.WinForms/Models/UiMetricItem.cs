@@ -1,12 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace EquipmentState.UI.WinForms.Models;
 
-namespace EquipmentState.UI.WinForms.Models
-{
-    internal class UiMetricItem
-    {
-    }
-}
+public sealed record UiMetricItem(string Key, double Value, string Unit);
